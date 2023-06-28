@@ -12,14 +12,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // Specify the port
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.get('/api', (req, res) => {
-  res.send('Hello World!')
-})
-
 app.post('/api/products', async (req, res) => {
   const pool = await getConnection()
   const request = pool.request()
